@@ -1,4 +1,4 @@
-package com.person.carshop.domain.models.controller;
+package com.person.carshop.domain.controller;
 
 import java.util.List;
 
