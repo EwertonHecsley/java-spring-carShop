@@ -13,16 +13,16 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(nullable = false)
+    @Column()
     private String modelo;
 
-    @Column(nullable = false)
+    @Column()
     private Integer ano;
 
-    @Column(nullable = false)
+    @Column()
     private String cor;
 
-    @Column(nullable = false)
+    @Column()
     private String fabricante;
 
 }

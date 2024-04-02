@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.person.carshop.domain.models.Car;
 import com.person.carshop.domain.service.CarService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 @RequestMapping("/car")
@@ -16,6 +19,13 @@ public class CarController {
 
     @Autowired
     private CarService carService;
+
+    @PostMapping
+    public Car create(@RequestBody Car dataCar) {
+        Car entity = carService.createCar(dataCar);
+        return entity;
+    }
+    
 
     @GetMapping
     public List<Car> listAllCars() {
